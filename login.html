@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login Form</title>
+  <link href="./Documentation/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="main">
-      <div class="left"></div>
-      <div class="right"></div>
-  </div>  
+
+<body class= "text-center">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-6 hero-image">
+        <div class="hero-text">
+          <h1>Women fashion</h1>
+          <p>Your favourite online store with designer clothes</p>
+          <button>Click for details</button>
+        </div>
+      </div>  
+
+      <div class="col-md-6 form-signin">
+        <form>
+          <img class="mb-4" src="SignIn_UserIcon.jpg" alt="" width="140" height="140">
+          <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+          <br>
+          <label for="inputEmail">Email address</label>
+          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+          <br>
+          <label for="inputPassword">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+          <br>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <br>
+          <a href="/SignUp_Form/signup.html">Don't have an account? Sign up here!</a>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
