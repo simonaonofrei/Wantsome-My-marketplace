@@ -1,0 +1,184 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Landing page</title>
+    <link href="./Documentation/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="productDetail.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   
+
+</head>
+
+<body>
+
+    <header>
+        <!-- Fixed header -->
+        <div class="header">
+            <div class="inner_header">
+                <div class="logo_container">
+                    <h1>Website<span>Logo</span></h1>
+                </div>
+                <ul class="navigation_header">
+                    <a>
+                        <li>Your cart</li>
+                    </a>
+                    <a>
+                        <li>Register</li>
+                    </a>
+                    <a>
+                        <li>Login</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation panel -->
+    <nav class="navigation">
+        <div class="container">
+            <ul class="navigation_menu row justify-content-center">
+                <li class="col-md-2 text-center"><a href="#">Home</a></li>
+                <li class="col-md-2 text-center"><a href="#">Portofolio</a></li>
+                <li class="col-md-2 text-center"><a href="#">Products</a>
+                    <ul>
+                        <li><a href="#">Blouses</a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#"> Coats and jackets</a></li>
+                    </ul>
+                </li>
+                <li class="col-md-2 text-center"><a href="#">Category</a></li>
+                <li class="col-md-2 text-center"><a href="#">Extra</a></li>
+                <li class="col-md-2 text-center"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- First hero image with search -->
+    <div class="searchContainer">
+        <div class="container ">
+            <form class="example2" action="action_page2.php">
+                <div class="first_hero_text">
+                    <input type="text" name="searchField" placeholder="Search by product code or model..">
+                    <button>Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Navigation path-->
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Categories</a></li>
+            <li class="breadcrumb-item"><a href="#">Dresses</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Polka dots</li>
+        </ol>
+    </nav>
+
+    <!----Image slider and cart selection----->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 leftContainer">
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active" data-thumb="0">
+                            <img src="ImageGallery.PNG">
+                        </div>
+                        <div class="item" data-thumb="0">
+                            <img src="ImageGallery1.1.PNG">
+                        </div>
+                        <div class="item" data-thumb="0">
+                            <img src="ImageGallery1.2.PNG">
+                        </div>
+                        <div class="item" data-thumb="0">
+                            <img src="ImageGallery1.3.PNG">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="clearfix">
+                    <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div data-target="#carousel" data-slide-to="0" class="thumb"><img
+                                        src="ImageGallery.PNG"></div>
+                                <div data-target="#carousel" data-slide-to="1" class="thumb"><img
+                                        src="ImageGallery1.1.PNG"></div>
+                                <div data-target="#carousel" data-slide-to="2" class="thumb"><img
+                                        src="ImageGallery1.2.PNG"></div>
+                                <div data-target="#carousel" data-slide-to="3" class="thumb"><img
+                                        src="ImageGallery1.3.PNG"></div>
+
+                            </div><!-- /item -->
+                            <div class="item">
+                                <div data-target="#carousel" data-slide-to="2" class="thumb"><img
+                                        src="ImageGallery1.2.PNG"></div>
+                                <div data-target="#carousel" data-slide-to="3" class="thumb"><img
+                                        src="ImageGallery1.3.PNG"></div>
+                                <div data-target="#carousel" data-slide-to="1" class="thumb"><img
+                                        src="ImageGallery1.1.PNG"></div>
+                                <div data-target="#carousel" data-slide-to="0" class="thumb"><img
+                                        src="ImageGallery.PNG"></div>
+
+                            </div><!-- /item -->
+                        </div><!-- /carousel-inner -->
+                        <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div> <!-- /thumbcarousel -->
+                </div><!-- /clearfix -->
+            </div> <!-- /col-sm-6 -->
+
+            <div class="col-md-6 rightContainer">
+                
+                <div class="col">
+                    <p class="newarrival text-center">New</p>
+                    <h2>Polka Dots Dress</h2>
+                    <p>Product code: D123</p>
+                    <img src="stars.png" class="stars">
+                    <p class="price">USD $30.00</p>
+                    <label>Quantity:</label>
+                    <input type="number" value="1"> <br> <br>
+                    <dl class="param param-inline">
+                        <dt>Size: </dt><br>
+                        <dd>
+                            <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <span class="form-check-label">S</span>
+                          </label>
+                          <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+                            <span class="form-check-label">M</span>
+                          </label>
+                          <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <span class="form-check-label">L</span>
+                          </label>  <label class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                            <span class="form-check-label">XL</span>
+                          </label>
+                        </dd>
+                  </dl>  <!-- item-property .// -->
+                    <button type="button" class="btn btn-default cart">Add to cart</button>
+                </div>
+            </div>  <!--se inchide div-ul col-md-6 de la descriere produs-->
+        </div> <!--se inchide row-->
+    </div>   <!-- se inchide containerul-->
+
+    <script src="productDetail.js.js"></script>
+</body>
+
+</html>
