@@ -19,30 +19,40 @@ fetch("http://localhost:3000/api/dresses", {
       e.preventDefault();
       var searchValue = document.getElementById("input").value;
       var t = 0;
+      var buttonSearch = document.getElementById("buttonSearch");
+          
+
       for (let i = 0; i < serverResponse.length; i++) {
         var x = (serverResponse[i].name).toUpperCase();
         var y = serverResponse[i].id;
-
+        
+        // For name search - the case in which there is a text search
         if (x.includes(searchValue.toUpperCase())) {
-          console.log(serverResponse[i].name);
           t++;
-          
-
+          buttonSearch.setAttribute("onclick", myFunction());
+          function myFunction() {
+            window.location.replace("listingPage.html?q=" + searchValue);
+          }
+           // For ID search - the case in which there is a numeric search
         } else if (y == searchValue) {
-          console.log(serverResponse[i].name);
           t++;
+          buttonSearch.setAttribute("onclick", myFunction());
+          function myFunction() {
+            window.location.replace("listingPage.html?q=" + searchValue);
+          }
         }
       }
-     
-      
+     // For the case in which there is no result for the value entered
       if (t === 0) {
         console.log('No results found for: ' + searchValue);
-        var noResults = document.createElement("div");
         var heroImage = document.getElementsByClassName("details1")[0];
+        var noResults = document.createElement("div");
+
         noResults.innerHTML = "No results found for: " + searchValue;
         noResults.style.padding = "20px";
         noResults.style.color = "white";
         heroImage.appendChild(noResults);
+       
       }
       
     }
