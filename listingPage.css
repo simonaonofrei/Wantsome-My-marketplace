@@ -118,102 +118,129 @@ nav{
   }
 
 
-  /* Sticky footer styles
+ /* Sticky footer styles
 -------------------------------------------------- */
- 
-.footer{
-    width: 100vw;
-    display: block;
-    overflow: hidden;
-    padding: 40px 0;
-    box-sizing: border-box;
-    background-color: 18181a;
-    /*  position: absolute; bottom: 0;  */
-  }
-  
-  .inner_footer{
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    height: 100%;
-  }
-  
-  .inner_footer .logo_container_footer{
-    width: 35%;
-    float: left;
-    height: 100%;
-    display: block;
-  }
-  
-  .inner_footer .logo_container_footer img{
-    width: 65px;
-    height: auto;
-  }
-  
-  .inner_footer .footer_third{
-    width: calc(21.6666666667% - 20px);
-    margin-right: 10px;
-    float: left;
-    height: 100%;
-  }
-  
-  .inner_footer .footer_third:last-child{
-    margin-right: 0;
-  }
-  
-  .inner_footer .footer_third h1{
-    font-family: 'Montserrat';
-    font-size: 22px;
-    color: white;
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .inner_footer .footer_third a{
-    font-family: 'Montserrat';
-    font-size: 18px;
-    color: white;
-    display: block;
-    font-weight: 200;
-    width: 100%;
-    padding-bottom: 5px;
-  }
-  
-  .inner_footer span{
-    color: white;
-    font-family: 'Montserrat';
-    font-size: 16px;
-    font-weight: 200;
-    display: block;
-    width: 100%;
-    padding-top: 20px;
-  }
-  
-  @media(max-width: 800px){
-    .footer .inner_footer{
-      width: 90%;
-    }
-  
-    .inner_footer .logo_container_footer,
-    .inner_footer .footer_third{
-      width: 100%;
-      margin-bottom: 30px;
-    }
-  }
+img{
+  width: 150px;
+  height: auto;
+}
+.page-footer{
+  background-color: #101010;
+  color: white;
+}
+
+.page-footer a{
+  color: white;
+    text-decoration: underline;
+}
+
   /* Listing cards */
   .card{
       text-align: center;
+      align-items: center;
       margin: 10px;
       padding: 10px;
       height: 400px;
       box-sizing: border-box;
+      
   }
+ .card h3{
+     font-size: medium;
+ }
+ 
+ .card p{
+    font-weight: bold;
+}
 .card img{
     height: 90%;
+    width: 80%;
 }
-.card button{
-    width: 60%;
-    height: 10%;
-    margin: 0 auto;
+
+/* inline block */
+
+.ib {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: top;
+}
+
+.ib-m {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    /* vertical-align: middle;*/
+    font-weight: lighter;   
+} 
+
+/* Filter  */
+
+.sidebar-heading {
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #eee;
+    font-size: 1.6em;
+}
+
+/* ul-reset */
+
+.ul-reset {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.filter-item {
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+.filter-item-inner {
+    border-bottom: 1px solid #eee;
+}
+
+.filter-item-inner-heading {
+    position: relative;
+    padding: 10px;
+    padding-right: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.filter-item-inner-heading.minus:after,
+.filter-item-inner-heading.plus:after {
+    position: absolute;
+    top: 33%;
+    right: 7.5%;
+    font-size: .6em;
+}
+
+.filter-item-inner-heading.minus:after {
+    content: "▲";
+}
+
+.filter-item-inner-heading.plus:after {
+    content: "▼";
+}
+
+.filter-attribute-list {
+    overflow: hidden;
+}
+
+.filter-attribute-list-inner {
+    padding: 0 10px 15px;
+}
+
+.filter-attribute-item {
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.filter-attribute-item:first-child {
+    margin-top: 0;
 }

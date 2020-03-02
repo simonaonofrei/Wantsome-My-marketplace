@@ -237,3 +237,19 @@ input{
   width: 60%;
 
 }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+img{
+  width: 150px;
+  height: auto;
+}
+.page-footer{
+  background-color: #101010;
+  color: white;
+}
+
+.page-footer a{
+  color: white;
+    text-decoration: underline;
+}

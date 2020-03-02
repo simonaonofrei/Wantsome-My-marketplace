@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    text-decoration: none;
+  }
+  
+    /* Stickey top bar 
+    -----------------------------------------------------*/
+  
+  .header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #101010;
+  }
+  .inner_header{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+   
+  }
+  .logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+  }
+  .logo_container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 200;
+  }
+  .logo_container h1 span{
+    font-weight:  800;
+  }
+  
+  .navigation_header{
+    float: right;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+  
+  .navigation_header a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+    
+  }
+  
+  .navigation_header a:last-child{
+    padding-right: 0;
+  }
+  
+  .navigation_header a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+  }
+  
+  
+  /* Sticky footer styles
+  -------------------------------------------------- */
+   
+  .footer{
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    padding: 40px 0;
+    box-sizing: border-box;
+    background-color: 18181a;
+    /*  position: absolute; bottom: 0;  */
+  }
+  
+  .inner_footer{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+  }
+  
+  .inner_footer .logo_container_footer{
+    width: 35%;
+    float: left;
+    height: 100%;
+    display: block;
+  }
+  
+  .inner_footer .logo_container_footer img{
+    width: 65px;
+    height: auto;
+  }
+  
+  .inner_footer .footer_third{
+    width: calc(21.6666666667% - 20px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+  }
+  
+  .inner_footer .footer_third:last-child{
+    margin-right: 0;
+  }
+  
+  .inner_footer .footer_third h1{
+    font-family: 'Montserrat';
+    font-size: 22px;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .inner_footer .footer_third a{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: white;
+    display: block;
+    font-weight: 200;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  
+  .inner_footer span{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  @media(max-width: 800px){
+    .footer .inner_footer{
+      width: 90%;
+    }
+  
+    .inner_footer .logo_container_footer,
+    .inner_footer .footer_third{
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  

@@ -20,63 +20,91 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="./Documentation/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+        
+
 </head>
 
 <body>
 
-    <header>
-        <!-- Fixed header -->
-        <div class="header">
-            <div class="inner_header">
-                <div class="logo_container">
-                    <h1>Website<span>Logo</span></h1>
-                </div>
-                <ul class="navigation_header">
-                    <a>
-                        <li>Your cart</li>
-                    </a>
-                    <a>
-                        <li>Register</li>
-                    </a>
-                    <a>
-                        <li>Login</li>
-                    </a>
+    <!-- Fixed header --->
+
+
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <h1>Women<span>Fashion</span></h1>
+            </div>
+            <ul class="navigation_header" id="myTopnav">
+                <a href="myCart.html">
+                    <li>Your cart</li>
+                </a>
+                <a href="signup.html">
+                    <li>Register</li>
+                </a>
+                <a href="login.html">
+                    <li>Login</li>
+                </a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Navigation panel -->
+    <div class="bodyNav">
+        <div class="container">
+
+            <div class="collapse navbar-collapse show"  id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav row justify-content-between">
+                    <li class="col-md-3"><a href="About.html">About us</a></li>
+
+
+                    <li class="col-md-3 dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Products<b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="listingPage.html?section=blouses">Blouses</a></li>
+                            <li><a href="listingPage.html?section=shirts">Shirts</a></li>
+                            <li><a href="listingPage.html?section=dresses">Dresses</a></li>
+                            <li><a href="listingPage.html?section=trousers">Trousers</a></li>
+                            <li><a href="listingPage.html?section=jeans">Jeans</a></li>
+                            <li><a href="listingPage.html?section=skirts">Skirts</a></li>
+                            <li><a href="listingPage.html?section=jackets">Jackets</a></li>
+                            <li><a href="listingPage.html?section=scarves">Scarves</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-3"><a href="#">New collection</a></li>
+                    <li class="col-md-3"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Navigation panel -->
-    <nav class="navigation">
-        <div class="container">
-            <ul class="navigation_menu row justify-content-center">
-                <li class="col-md-2 text-center"><a href="#">Home</a></li>
-                <li class="col-md-2 text-center"><a href="#">Portofolio</a></li>
-                <li class="col-md-2 text-center"><a href="#">Products</a>
-                    <ul>
-                        <li><a href="#">Blouses</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#"> Coats and jackets</a></li>
-                    </ul>
-                </li>
-                <li class="col-md-2 text-center"><a href="#">Category</a></li>
-                <li class="col-md-2 text-center"><a href="#">Extra</a></li>
-                <li class="col-md-2 text-center"><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- First hero image with search -->
-    <form class="example" action="action_page.php">
-        <div class="first_hero_image">
-            <div class="first_hero_text">
-                <h1 style="font-size:50px">Clothes for every woman</h1>
-                <p>Search below for specific styles</p>
-                <input type="text" name="searchField" placeholder="Search..">
-                <button>Search</button>
+
+    <form id="searchExample" action="/search/" method="GET" target="_blank">
+    <div class="imagineHero1">
+        <section class="bgimage1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 details1">
+                        <h1>Clothes for every woman</h1>
+                        <input type="text" name="searchField" id="input" placeholder=" Search for specific product..." value="">
+                        <button type="submit"><i class="fa fa-search"></i>Search</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </form>
+        </section>
+    </div>
+</form>
+
 
     <!-- Section title - Clothes cards-->
 
@@ -89,41 +117,50 @@
                 <!--Slider 1-->
                 <div class="carousel-item active">
                     <div class="row card-body">
-                        <div class="card col-3 text-center"> 
-                            <img class="card-img-top d-block w-100" src="Capture1.PNG"
-                                alt="First picture">
+                        <div class="card col-3 text-center">
+                            <img class="card-img-top d-block w-100" src="./Skirts.jpg" alt="First picture">
                             <div class="card-body">
                                 <h5 class="card-title">Skirts</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk of the card's content.</p>
-                                <a href="listingPage.html?section=skirts" class="btn btn-primary" id="Skirts">Go to Skirts</a>
+                                <a href="listingPage.html?section=skirts" class="btn btn-primary" id="Skirts">Go to
+                                    Skirts</a>
                             </div>
                         </div>
-                        <div class="card col-3 text-center"> <img class="card-img-top d-block w-100" src="Capture2.PNG"
+                        <div class="card col-3 text-center"> <img class="card-img-top d-block w-100" src="./Jackets.jpg"
                                 alt="Second picture">
                             <div class="card-body">
                                 <h5 class="card-title">Jackets</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk of the card's content.</p>
-                                <a href="listingPage.html?section=jackets" class="btn btn-primary" id="Jackets">Go to Jackets</a>
+                                <a href="listingPage.html?section=jackets" class="btn btn-primary" id="Jackets">Go
+                                    to
+                                    Jackets</a>
                             </div>
                         </div>
-                        <div class="card col-3 text-center"> <img class="card-img-top d-block w-100" src="Capture3.PNG"
+                        <div class="card col-3 text-center"> <img class="card-img-top d-block w-100" src="Jeans.jpg"
                                 alt="Third picture">
                             <div class="card-body">
                                 <h5 class="card-title">Jeans</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk of the card's content.</p>
-                                <a href="listingPage.html?section=jeans" class="btn btn-primary" id="Jeans">Go to Jeans</a>
+                                <a href="listingPage.html?section=jeans" class="btn btn-primary" id="Jeans">Go to
+                                    Jeans</a>
                             </div>
                         </div>
-                        <div class="card col-3 text-center"> <img class="card-img-top d-block w-100" src="Capture4.PNG"
+                        <div class="card col-3 text-center"> <img class="card-img-top d-block w-100" src="Scarves.jpg"
                                 alt="Forth picture">
                             <div class="card-body">
                                 <h5 class="card-title">Scarves</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk of the card's content.</p>
-                                <a href="listingPage.html?section=" class="btn btn-primary" id="Scarves">Go to Scarves</a>
+                                <a href="listingPage.html?section=Scarves" class="btn btn-primary" id="Scarves">Go
+                                    to
+                                    Scarves</a>
                             </div>
                         </div>
                     </div>
@@ -133,40 +170,51 @@
                 <!--Slider 2-->
                 <div class="carousel-item">
                     <div class="row card-body">
-                        <div class="card col-3"> <img class="card-img-top d-block w-100" src="Capture5.PNG"
+                        <div class="card col-3"> <img class="card-img-top d-block w-100" src="Dresses.jpg"
                                 alt="Fifth picture">
                             <div class="card-body">
                                 <h5 class="card-title">Dresses</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk of the card's content.</p>
-                                <a href="listingPage.html?section=" class="btn btn-primary" id="Dresses">Go to Dresses</a>
+                                <a href="listingPage.html?section=Dresses" class="btn btn-primary" id="Dresses">Go
+                                    to
+                                    Dresses</a>
                             </div>
                         </div>
-                        <div class="card col-3"> <img class="card-img-top d-block w-100" src="Capture6.PNG"
+                        <div class="card col-3"> <img class="card-img-top d-block w-100" src="Shirts.jpg"
                                 alt="Sixth picture">
                             <div class="card-body">
                                 <h5 class="card-title">Shirts</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk of the card's content.</p>
-                                <a href="listingPage.html?section=" class="btn btn-primary" id="Shirts">Go to Shirts</a>
+                                <a href="listingPage.html?section=Shirts" class="btn btn-primary" id="Shirts">Go to
+                                    Shirts</a>
                             </div>
                         </div>
-                        <div class="card col-3"> <img class="card-img-top d-block w-100" src="Capture7.PNG"
+                        <div class="card col-3"> <img class="card-img-top d-block w-100" src="Blouses.jpg"
                                 alt="Seventh picture">
                             <div class="card-body">
                                 <h5 class="card-title">Blouses</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk of the card's content.</p>
-                                <a href="listingPage.html?section=" class="btn btn-primary" id="Blouses">Go to Blouses</a>
+                                <a href="listingPage.html?section=Blouses" class="btn btn-primary" id="Blouses">Go
+                                    to
+                                    Blouses</a>
                             </div>
                         </div>
-                        <div class="card col-3"> <img class="card-img-top d-block w-100" src="Capture8.PNG"
+                        <div class="card col-3"> <img class="card-img-top d-block w-100" src="Trousers.jpg"
                                 alt="Eight picture">
                             <div class="card-body">
                                 <h5 class="card-title">Trousers</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk of the card's content.</p>
-                                <a href="listingPage.html?section=" class="btn btn-primary" id="Trousers">Go to Trousers</a>
+                                <a href="listingPage.html?section=Trousers" class="btn btn-primary" id="Trousers">Go
+                                    to
+                                    Trousers</a>
                             </div>
                         </div>
                     </div>
@@ -183,55 +231,132 @@
         </div>
     </div>
 
-    <!-- Second hero image with search -->
-    <form>
-      
-            <div class="second_hero_image">
-                <div class="second_hero_text">
-                    <h1>Check out our latest collection</h1>
-                    <button>Details</button>
+    <!-- Second hero image -->
+
+    <div class="imagineHero2">
+        <section class="bgimage2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 details2">
+                        <h1>Check out our latest collection</h1>
+                        <a href="#" class="btn btn-primary btn-large">Details</a>
+                    </div>
                 </div>
             </div>
-       
-    </form>
+        </section>
+    </div>
+
 
     <!-- Fixed footer -->
-    <div class=" footer ">
-        <div class="inner_footer row">
-            <div class="logo_container_footer">
-                <img src="SignIn_Form/logoImage.jpg">
-                <span>&copy; 2020 WomenFashion.com</span>
+
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container">
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3 footerImg">
+
+                        <!-- Content -->
+
+                        <img src="Women_Fashion_logo.jpg">
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">About</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Team</a>
+                            </li>
+                            <li>
+                                <a href="#">Jobs</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Press</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Help</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Security</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Connect</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#">Youtube</a>
+                            </li>
+                            <li>
+                                <a href="#">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#">Instagram</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
             </div>
+            <!-- Footer Links -->
 
-            <div class="footer_third">
-                <h1>About</h1>
-                <a href="#">Team</a>
-                <a href="#">Jobs</a>
-                <a href="#">Blog</a>
-                <a href="#">Press</a>
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> WomenFashion.com</a>
             </div>
+            <!-- Copyright -->
 
-            <div class="footer_third">
-                <h1>Help</h1>
-                <a href="#">FAQ</a>
-                <a href="#">Security</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-
-            <div class="footer_third">
-                <h1>Connect</h1>
-                <a href="#">Facebook</a>
-                <a href="#">Youtube</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-
-
-
-        </div>
+    </footer>
     </div>
     <script src="landingPage.js"></script>
+
 </body>
 
 </html>

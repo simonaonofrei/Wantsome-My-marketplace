@@ -1,4 +1,4 @@
-var buton = document.getElementsByClassName("btn")[0];
+var buton = document.getElementsByClassName("btn")[1];
 console.log(buton);
 var body = {};
 buton.addEventListener("click", myFn);

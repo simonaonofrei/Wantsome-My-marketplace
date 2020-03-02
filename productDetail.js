@@ -1,3 +1,10 @@
+// Autentificare cu token dupa logare - sign in
+fetch("http://localhost:3000/api/watches", {
+    headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("token")}`
+    }
+})
+
 (function($){
     $('#thumbcarousel').carousel(0);
     var $thumbItems = $('#thumbcarousel .item');
