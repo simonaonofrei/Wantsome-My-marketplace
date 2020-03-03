@@ -8,114 +8,83 @@
     /* Stickey top bar 
     -----------------------------------------------------*/
   
-  .header{
-    width: 100%;
-    height: 80px;
-    display: block;
-    background-color: #101010;
-  }
-  .inner_header{
-    width: 90%;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-   
-  }
-  .logo_container{
-    height: 100%;
-    display: table;
-    float: left;
-  }
-  .logo_container h1{
-    color: white;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: 'Montserrat';
-    font-size: 32px;
-    font-weight: 200;
-  }
-  .logo_container h1 span{
-    font-weight:  800;
-  }
-  
-  .navigation_header{
-    float: right;
-    height: 100%;
-    margin-bottom: 0px;
-  }
-  
-  .navigation_header a{
-    height: 100%;
-    display: table;
-    float: left;
-    padding: 0px 20px;
-    
-  }
-  
-  .navigation_header a:last-child{
-    padding-right: 0;
-  }
-  
-  .navigation_header a li{
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-    color: white;
-    font-family: 'Montserrat';
-    font-size: 16px;
-  }
-  
+    .header{
+      width: 100%;
+      height: 80px;
+      display: block;
+      background-color: #101010;
+    }
+    .inner_header {
+      
+      height: 100%;
+      display: block;
+      margin: 0 189.60px;
+    }
 
-/*---Navigation menu
+    .logo_container{
+      height: 100%;
+      display: table;
+      float: left;
+    }
+    .logo_container h1{
+      color: white;
+      height: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      font-family: 'Montserrat';
+      font-size: 32px;
+      font-weight: 200;
+    }
+    .logo_container h1 span{
+      font-weight:  800;
+    }
+    
+    .navigation_header{
+      float: right;
+      height: 100%;
+      margin-bottom: 0px;
+    }
+    
+    .navigation_header a{
+      height: 100%;
+      display: table;
+      float: left;
+      padding: 0px 20px;
+      
+    }
+    
+    .navigation_header a:last-child{
+      padding-right: 0;
+    }
+    
+    .navigation_header a li{
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+      color: white;
+      font-family: 'Montserrat';
+      font-size: 16px;
+    }
+    
+ 
+
+
+/*---Navigation panel
 --------------------------------------*/
 
-nav{
-    width: 100%;
-    height: 60px;
-    background-color: white;
-  }
-  
-  
-  nav ul li{
-    float: left;
-    list-style: none;
-    position: relative;
-  }
-  
-  nav ul li a {
-    display: block;
-    font-family: 'Montserrat';
-    color: 222;
-    font-size: 14px;
-    padding: 22px 14px;
-    text-decoration: none;
-  }
-  
-  nav ul li ul{
-    display: none;
-    position: absolute;
-    background-color: fff;
-    padding: 10px;
-    border-radius: 0px 0px 4px 4px;
-  }
-  
-  nav ul li:hover ul{
-    display: block;
-  }
-  
-  nav ul li ul li{
-    width: 180px;
-    border-radius: 4px;
-  }
-  nav ul li ul li a{
-    padding-bottom: 8px 14px;
-  }
-  
-  nav ul li ul li a:hover{
-    padding-bottom: 8px 14px;
-    background-color: f3f3f3;
-  }
+nav {
+  margin-top: 60px; 
+}
+
+.navbar-nav {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 0px;
+ float: inherit;
+}
+.navbar-nav li a{
+  color: black;
+}
 
 
  /* Sticky footer styles
@@ -228,12 +197,16 @@ img{
   body{
     color: #434444;
   }
-  .container{
-    padding-top: 50px;
+  .cardsContainer{
+    
+    padding: 0px;
   }
   hr{
     width: 300px;
     border: 3px solid #434444;
+  }
+  .card-body{
+    padding: 0px ;
   }
   
   /* Product Grid */

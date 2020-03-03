@@ -10,59 +10,85 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
 
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="./Documentation/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    
 </head>
 
 <body>
 
-    <header>
-        <!-- Fixed header -->
-        <div class="header">
-            <div class="inner_header">
-                <div class="logo_container">
-                    <h1>Website<span>Logo</span></h1>
-                </div>
-                <ul class="navigation_header">
-                    <a>
-                        <li>Your cart</li>
-                    </a>
-                    <a>
-                        <li>Register</li>
-                    </a>
-                    <a>
-                        <li>Login</li>
-                    </a>
+    <!-- Fixed header --->
+
+
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <h1>Women<span>Fashion</span></h1>
+            </div>
+            <ul class="navigation_header" id="myTopnav">
+                <a href="myCart.html">
+                    <li>Your cart</li>
+                </a>
+                <a href="signup.html">
+                    <li>Register</li>
+                </a>
+                <a href="login.html">
+                    <li>Login</li>
+                </a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Navigation panel -->
+    <div class="container navContainer">
+        <div class="bodyNav">
+
+            <div class="collapse navbar-collapse show" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav row justify-content-between">
+                    <li class="col-md-2 text-center"><a href="About.html">About us</a></li>
+                    <li class="col-md-2 text-center"><a href="landingPage.html">Home</a></li>
+
+                    <li class="col-md-2 dropdown text-center">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Products<b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="listingPage.html?section=blouses">Blouses</a></li>
+                            <li><a href="listingPage.html?section=shirts">Shirts</a></li>
+                            <li><a href="listingPage.html?section=dresses">Dresses</a></li>
+                            <li><a href="listingPage.html?section=trousers">Trousers</a></li>
+                            <li><a href="listingPage.html?section=jeans">Jeans</a></li>
+                            <li><a href="listingPage.html?section=skirts">Skirts</a></li>
+                            <li><a href="listingPage.html?section=jackets">Jackets</a></li>
+                            <li><a href="listingPage.html?section=scarves">Scarves</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-2 text-center"><a href="#">New collection</a></li>
+                    <li class="col-md-2 text-center"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Navigation panel -->
-    <nav class="navigation">
-        <div class="container">
-            <ul class="navigation_menu row justify-content-center">
-                <li class="col-md-2 text-center"><a href="#">Home</a></li>
-                <li class="col-md-2 text-center"><a href="#">Portofolio</a></li>
-                <li class="col-md-2 text-center"><a href="#">Products</a>
-                    <ul>
-                        <li><a href="#">Blouses</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Coats and jackets</a></li>
-                    </ul>
-                </li>
-                <li class="col-md-2 text-center"><a href="#">Category</a></li>
-                <li class="col-md-2 text-center"><a href="#">Extra</a></li>
-                <li class="col-md-2 text-center"><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- Products-->
-    <div class="container">
+    <div class="container cardsContainer">
         <div class="row">
             <!--Sectiune filtrare-->
             <div class="col-md-3">
@@ -243,115 +269,115 @@
     </div>
 
 
-     <!-- Fixed footer -->
+    <!-- Fixed footer -->
 
-     <footer class="page-footer font-small blue pt-4">
+    <footer class="page-footer font-small blue pt-4">
         <div class="container">
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
 
-            <!-- Grid row -->
-            <div class="row">
+                <!-- Grid row -->
+                <div class="row">
 
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
 
-                    <!-- Content -->
+                        <!-- Content -->
 
-                    <img src="SignIn_Form/logoImage.jpg">
+                        <img src="SignIn_Form/logoImage.jpg">
 
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">About</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Team</a>
+                            </li>
+                            <li>
+                                <a href="#">Jobs</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Press</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Help</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Security</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Connect</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#">Youtube</a>
+                            </li>
+                            <li>
+                                <a href="#">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#">Instagram</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
 
                 </div>
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">About</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">Team</a>
-                        </li>
-                        <li>
-                            <a href="#">Jobs</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">Press</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Help</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#">Security</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms of Service</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-                <!-- Grid column -->
-                <div class="col-md-2 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Connect</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">Facebook</a>
-                        </li>
-                        <li>
-                            <a href="#">Youtube</a>
-                        </li>
-                        <li>
-                            <a href="#">Twitter</a>
-                        </li>
-                        <li>
-                            <a href="#">Instagram</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
+                <!-- Grid row -->
 
             </div>
-            <!-- Grid row -->
+            <!-- Footer Links -->
 
-        </div>
-        <!-- Footer Links -->
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> WomenFashion.com</a>
-        </div>
-        <!-- Copyright -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> WomenFashion.com</a>
+            </div>
+            <!-- Copyright -->
 
     </footer>
-</div>
-<!--End footer-->
+    </div>
+    <!--End footer-->
     <script src="listingPage.js"></script>
 </body>
 

@@ -6,60 +6,82 @@
     <title>Product detail</title>
     <link href="./Documentation/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet"
         type="text/css" />
+    <script src="./Documentation/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+
     <link href="productDetail.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
 
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-   
+    
+
 
 </head>
 
 <body>
 
-    <header>
-        <!-- Fixed header -->
-        <div class="header">
-            <div class="inner_header">
-                <div class="logo_container">
-                    <h1>Website<span>Logo</span></h1>
-                </div>
-                <ul class="navigation_header">
-                    <a>
-                        <li>Your cart</li>
-                    </a>
-                    <a>
-                        <li>Register</li>
-                    </a>
-                    <a>
-                        <li>Login</li>
-                    </a>
+    <!-- Fixed header --->
+
+
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <h1>Women<span>Fashion</span></h1>
+            </div>
+            <ul class="navigation_header" id="myTopnav">
+                <a href="myCart.html">
+                    <li>Your cart</li>
+                </a>
+                <a href="signup.html">
+                    <li>Register</li>
+                </a>
+                <a href="login.html">
+                    <li>Login</li>
+                </a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Navigation panel -->
+    <div class="bodyNav">
+        <div class="container">
+
+            <div class="collapse navbar-collapse show" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav row justify-content-between">
+                    <li class="col-md-2 text-center"><a href="About.html">About us</a></li>
+                    <li class="col-md-2 text-center"><a href="landingPage.html">Home</a></li>
+
+                    <li class="col-md-2 dropdown text-center">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Products<b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="listingPage.html?section=blouses">Blouses</a></li>
+                            <li><a href="listingPage.html?section=shirts">Shirts</a></li>
+                            <li><a href="listingPage.html?section=dresses">Dresses</a></li>
+                            <li><a href="listingPage.html?section=trousers">Trousers</a></li>
+                            <li><a href="listingPage.html?section=jeans">Jeans</a></li>
+                            <li><a href="listingPage.html?section=skirts">Skirts</a></li>
+                            <li><a href="listingPage.html?section=jackets">Jackets</a></li>
+                            <li><a href="listingPage.html?section=scarves">Scarves</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-2 text-center"><a href="#">New collection</a></li>
+                    <li class="col-md-2 text-center"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
-    </header>
-
-    <!-- Navigation panel -->
-    <nav class="navigation">
-        <div class="container">
-            <ul class="navigation_menu row justify-content-center">
-                <li class="col-md-2 text-center"><a href="#">Home</a></li>
-                <li class="col-md-2 text-center"><a href="#">Portofolio</a></li>
-                <li class="col-md-2 text-center"><a href="#">Products</a>
-                    <ul>
-                        <li><a href="#">Blouses</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#"> Coats and jackets</a></li>
-                    </ul>
-                </li>
-                <li class="col-md-2 text-center"><a href="#">Category</a></li>
-                <li class="col-md-2 text-center"><a href="#">Extra</a></li>
-                <li class="col-md-2 text-center"><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    </div>
 
     <!-- First hero image with search -->
     <div class="searchContainer">
@@ -88,62 +110,12 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 leftContainer">
-                <div id="carousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="item active" data-thumb="0">
-                            <img src="ImageGallery.PNG">
-                        </div>
-                        <div class="item" data-thumb="0">
-                            <img src="ImageGallery1.1.PNG">
-                        </div>
-                        <div class="item" data-thumb="0">
-                            <img src="ImageGallery1.2.PNG">
-                        </div>
-                        <div class="item" data-thumb="0">
-                            <img src="ImageGallery1.3.PNG">
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="clearfix">
-                    <div id="thumbcarousel" class="carousel slide" data-interval="false">
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div data-target="#carousel" data-slide-to="0" class="thumb"><img
-                                        src="ImageGallery.PNG"></div>
-                                <div data-target="#carousel" data-slide-to="1" class="thumb"><img
-                                        src="ImageGallery1.1.PNG"></div>
-                                <div data-target="#carousel" data-slide-to="2" class="thumb"><img
-                                        src="ImageGallery1.2.PNG"></div>
-                                <div data-target="#carousel" data-slide-to="3" class="thumb"><img
-                                        src="ImageGallery1.3.PNG"></div>
-
-                            </div><!-- /item -->
-                            <div class="item">
-                                <div data-target="#carousel" data-slide-to="2" class="thumb"><img
-                                        src="ImageGallery1.2.PNG"></div>
-                                <div data-target="#carousel" data-slide-to="3" class="thumb"><img
-                                        src="ImageGallery1.3.PNG"></div>
-                                <div data-target="#carousel" data-slide-to="1" class="thumb"><img
-                                        src="ImageGallery1.1.PNG"></div>
-                                <div data-target="#carousel" data-slide-to="0" class="thumb"><img
-                                        src="ImageGallery.PNG"></div>
-
-                            </div><!-- /item -->
-                        </div><!-- /carousel-inner -->
-                        <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                    </div> <!-- /thumbcarousel -->
-                </div><!-- /clearfix -->
+                
+               
             </div> <!-- /col-sm-6 -->
 
             <div class="col-md-6 rightContainer">
-                
+
                 <div class="col">
                     <p class="newarrival text-center">New</p>
                     <h2>Polka Dots Dress</h2>
@@ -156,139 +128,145 @@
                         <dt>Size: </dt><br>
                         <dd>
                             <label class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <span class="form-check-label">S</span>
-                          </label>
-                          <label class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
-                            <span class="form-check-label">M</span>
-                          </label>
-                          <label class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                            <span class="form-check-label">L</span>
-                          </label>  <label class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                            <span class="form-check-label">XL</span>
-                          </label>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <span class="form-check-label">S</span>
+                            </label>
+                            <label class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option1">
+                                <span class="form-check-label">M</span>
+                            </label>
+                            <label class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="option3">
+                                <span class="form-check-label">L</span>
+                            </label> <label class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                    value="option4">
+                                <span class="form-check-label">XL</span>
+                            </label>
                         </dd>
-                  </dl>  <!-- item-property .// -->
+                    </dl> <!-- item-property .// -->
                     <button type="button" class="btn btn-default cart">Add to cart</button>
                 </div>
-            </div>  <!--se inchide div-ul col-md-6 de la descriere produs-->
-        </div> <!--se inchide row-->
-    </div>   <!-- se inchide containerul-->
+            </div>
+            <!--se inchide div-ul col-md-6 de la descriere produs-->
+        </div>
+        <!--se inchide row-->
+    </div> <!-- se inchide containerul-->
 
-      <!-- Fixed footer -->
+    <!-- Fixed footer -->
 
-      <footer class="page-footer font-small blue pt-4">
+    <footer class="page-footer font-small blue pt-4">
         <div class="container">
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
 
-            <!-- Grid row -->
-            <div class="row">
+                <!-- Grid row -->
+                <div class="row">
 
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
 
-                    <!-- Content -->
+                        <!-- Content -->
 
-                    <img src="SignIn_Form/logoImage.jpg">
+                        <img src="SignIn_Form/logoImage.jpg">
 
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">About</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Team</a>
+                            </li>
+                            <li>
+                                <a href="#">Jobs</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Press</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Help</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Security</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Connect</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#">Youtube</a>
+                            </li>
+                            <li>
+                                <a href="#">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#">Instagram</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
 
                 </div>
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">About</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">Team</a>
-                        </li>
-                        <li>
-                            <a href="#">Jobs</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">Press</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Help</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#">Security</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms of Service</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-                <!-- Grid column -->
-                <div class="col-md-2 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Connect</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">Facebook</a>
-                        </li>
-                        <li>
-                            <a href="#">Youtube</a>
-                        </li>
-                        <li>
-                            <a href="#">Twitter</a>
-                        </li>
-                        <li>
-                            <a href="#">Instagram</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
+                <!-- Grid row -->
 
             </div>
-            <!-- Grid row -->
+            <!-- Footer Links -->
 
-        </div>
-        <!-- Footer Links -->
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> WomenFashion.com</a>
-        </div>
-        <!-- Copyright -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> WomenFashion.com</a>
+            </div>
+            <!-- Copyright -->
 
     </footer>
-</div>
+    </div>
+    <!--End footer-->
 
-<!--End footer-->
-    <script src="productDetail.js.js"></script>
+    <script src="productDetail.js"></script>
 </body>
 
 </html>

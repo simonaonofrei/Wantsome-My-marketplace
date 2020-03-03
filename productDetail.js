@@ -1,28 +1,16 @@
 // Autentificare cu token dupa logare - sign in
-fetch("http://localhost:3000/api/watches", {
+fetch(`http://localhost:3000/api/dresses${window.location.search}`, {
     headers: {
         Authorization: `Bearer ${sessionStorage.getItem("token")}`
     }
-})
+});
 
-(function($){
-    $('#thumbcarousel').carousel(0);
-    var $thumbItems = $('#thumbcarousel .item');
-    $('#carousel').on('slide.bs.carousel', function (event) {
-       var $slide = $(event.relatedTarget);
-       var thumbIndex = $slide.data('thumb');
-       var curThumbIndex = $thumbItems.index($('#thumbcarousel .item.active').get(0));
-        if (curThumbIndex>thumbIndex) {
-            $('#thumbcarousel').one('slid.bs.carousel', function (event) {
-                $('#thumbcarousel').carousel(thumbIndex);
-            });
-            if (curThumbIndex === ($thumbItems.length-1)) {
-                $('#thumbcarousel').carousel('next');
-            } else {
-                $('#thumbcarousel').carousel(numThumbItems-1);
-            }
-        } else {
-            $('#thumbcarousel').carousel(thumbIndex);
-        }
-    });
-})(jQuery);
+
+
+
+// Navigation bar
+$('ul.nav li.dropdown').hover(function () {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+  }, function () {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+  });
