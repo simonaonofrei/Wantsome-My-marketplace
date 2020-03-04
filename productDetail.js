@@ -14,3 +14,19 @@ $('ul.nav li.dropdown').hover(function () {
   }, function () {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
   });
+
+
+//Details part
+$(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})

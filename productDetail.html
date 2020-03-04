@@ -17,9 +17,9 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script> 
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-    
+
 
 
 </head>
@@ -95,66 +95,101 @@
         </div>
     </div>
 
-    <!-- Navigation path-->
+    <!-- Breadcrumb path-->
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="landingPage.html">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Categories</a></li>
-            <li class="breadcrumb-item"><a href="#">Dresses</a></li>
+            <li class="breadcrumb-item"><a href="listingPage.html?section=Dresses">Dresses</a></li>
             <li class="breadcrumb-item active" aria-current="page">Polka dots</li>
         </ol>
     </nav>
 
     <!----Image slider and cart selection----->
-    <div class="container">
+    <div class="container mainContainer">
         <div class="row">
-            <div class="col-sm-6 leftContainer">
-                
-               
+            <div class="col-sm-6 left">
+                <div class="bobita">
+                    <ul class="thumb">
+                        <li><a href="ImageGallery.PNG" target="imgBox"><img src="ImageGallery.PNG"></a></li>
+                        <li><a href="ImageGallery1.1.PNG" target="imgBox"><img src="ImageGallery1.1.PNG"></a></li>
+                        <li><a href="ImageGallery1.2.PNG" target="imgBox"><img src="ImageGallery1.2.PNG"></a></li>
+                    </ul>
+                    <div class="imgBox"><img src="ImageGallery.PNG">
+                    </div>
+                </div>
+
             </div> <!-- /col-sm-6 -->
 
-            <div class="col-md-6 rightContainer">
+            <div class="col-md-6 right">
 
-                <div class="col">
-                    <p class="newarrival text-center">New</p>
-                    <h2>Polka Dots Dress</h2>
-                    <p>Product code: D123</p>
-                    <img src="stars.png" class="stars">
-                    <p class="price">USD $30.00</p>
-                    <label>Quantity:</label>
-                    <input type="number" value="1"> <br> <br>
-                    <dl class="param param-inline">
-                        <dt>Size: </dt><br>
-                        <dd>
-                            <label class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1">
-                                <span class="form-check-label">S</span>
-                            </label>
-                            <label class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option1">
-                                <span class="form-check-label">M</span>
-                            </label>
-                            <label class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                    value="option3">
-                                <span class="form-check-label">L</span>
-                            </label> <label class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
-                                    value="option4">
-                                <span class="form-check-label">XL</span>
-                            </label>
-                        </dd>
-                    </dl> <!-- item-property .// -->
-                    <button type="button" class="btn btn-default cart">Add to cart</button>
+                <!-- Product Description -->
+                <div class="product-description">
+                    <h1>Fit and flare dress</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
                 </div>
-            </div>
-            <!--se inchide div-ul col-md-6 de la descriere produs-->
-        </div>
-        <!--se inchide row-->
+
+                <!-- Product Configuration -->
+                <div class="product-configuration">
+
+
+                    <!-- Cable Configuration -->
+                    <div class="cable-config">
+                        <span>Size</span>
+
+                        <div class="cable-choose">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                        </div>
+
+                        <a href="#">Search here for your size</a>
+                    </div>
+                </div>
+
+                <!-- Product Pricing -->
+                <div class="product-price">
+                    <span>148$</span>
+                    <a href="#" class="cart-btn">Add to cart</a>
+                </div>
+            </div> <!--se inchide right container-->      
+        </div>  <!--se inchide row-->
     </div> <!-- se inchide containerul-->
+    <br>
+    <br>
+
+    <!--  Details part -->
+
+    <div class="container">
+
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1">Product Details</li>
+            <li class="tab-link" data-tab="tab-2">Materials</li>
+            <li class="tab-link" data-tab="tab-3">Reviews</li>
+            <li class="tab-link" data-tab="tab-4">Delivery and return</li>
+        </ul>
+
+        <div id="tab-1" class="tab-content current">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </div>
+        <div id="tab-2" class="tab-content">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </div>
+        <div id="tab-3" class="tab-content">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+        <div id="tab-4" class="tab-content">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+    </div><!-- container -->
+    <br>
 
     <!-- Fixed footer -->
 
@@ -265,8 +300,16 @@
     </footer>
     </div>
     <!--End footer-->
-
     <script src="productDetail.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.thumb a').mouseover(function (e) {
+                e.preventDefault();
+                $('.imgBox img').attr("src", $(this).attr("href"))
+            })
+        })
+    </script>
 </body>
 
 </html>
