@@ -33,7 +33,7 @@ fetch(`http://localhost:3000/api/dresses${window.location.search}`, {
                     image.classList.add("image");
 
                     var linkEl = document.createElement("a");
-                    linkEl.setAttribute("href", "productDetail.html?id=" + response[i].id);
+                    linkEl.setAttribute("href", "productDetail.html?productId=" + response[i].id);
 
 
                     var imageEl = document.createElement("img");
@@ -382,9 +382,31 @@ var shoppingCart = (function() {
   
   displayCart();  //end of cart js
   
+// filter selector
+// var colorList = document.getElementById("colourFilter");   
+// var sizeList = document.getElementById("sizeList"); 
+// var priceList = document.getElementById("priceList"); 
+
+// document.addEventListener("DOMContentLoaded", function () {
+    // 
+    
+    // for (let i = 0; i < list.length; i++) {
+    //     list[i].addEventListener("click", function (e) {
+    //         for (let j = 0; j < products.length - 1; j++) {
+    //             products[j].style.display = 'none';
+    //         }
+    //         var elements = document.getElementsByClassName(this.querySelectorAll('label')[0].innerHTML.trim().toLowerCase());
+    //         for (let k = 0; k < elements.length; k++) {
+    //             elements[k].style.display = 'block';
+    //         }
+
+    //         return;
+    //     });
+    // }
+// });
+
+    
 }); //End respose featched from server
-
-
 
 
 //// filter accordeon
@@ -411,25 +433,15 @@ $('ul.nav li.dropdown').hover(function () {
 });
 
 
-// filter selector
-// var colorList = document.getElementById("colourFilter");   
-// var sizeList = document.getElementById("colourFilter"); 
-// var priceList = document.getElementById("colourFilter"); 
-// document.addEventListener("DOMContentLoaded", function () {
-//     var list = document.getElementsByClassName("filter-attribute-item");
-//     var products = document.getElementsByClassName("card");
 
-//     for (let i = 0; i < list.length; i++) {
-//         list[i].addEventListener("click", function (e) {
-//             for (let j = 0; j < products.length - 1; j++) {
-//                 products[j].style.display = 'none';
-//             }
-//             var elements = document.getElementsByClassName(this.querySelectorAll('label')[0].innerHTML.trim().toLowerCase());
-//             for (let k = 0; k < elements.length; k++) {
-//                 elements[k].style.display = 'block';
-//             }
 
-//             return;
-//         });
-//     }
-// });
+// var products = document.getElementsByClassName("filter-attribute-list")[0];
+// console.log(products);
+// function hide(eventul) {
+//   var list = document.getElementsByClassName("filter-attribute-item");
+//   for (let i=0; i< list.length; i++){
+
+//   console.log(eventul[i].target.innerHTML);
+// }
+// }
+// list.addEventListener("click", hide);

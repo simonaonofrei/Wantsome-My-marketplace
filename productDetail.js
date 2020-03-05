@@ -21,7 +21,6 @@ fetch(`http://localhost:3000/api/dresses${window.location.search}`, {
           var divImag = document.querySelector('div>img');
           divImag.setAttribute("src", response[i].image);
 
-
           //identific div-ul cu product description
           var productNameDiv = document.getElementsByClassName("product-description")[0];
           
@@ -30,18 +29,24 @@ fetch(`http://localhost:3000/api/dresses${window.location.search}`, {
           productName.innerHTML=response[i].name;
 
           var productID = document.querySelectorAll('div > p')[0];
-          productID.innerHTML= "Cod produs: " + response[i].id;
+          productID.innerHTML= "Product code: " + response[i].id;
 
           var productPriceDiv = document.getElementsByClassName("product-price")[0];
           var productPrice = productPriceDiv.getElementsByTagName("span")[0];
           productPrice.innerHTML= "$" + response[i].price;      
           
+          // identif div-ul care contine marimile
+          var sizeDiv = document.getElementsByClassName("cable-choose")[0];
+          var sizeButton = sizeDiv.getElementsByTagName("button")[0];
+          sizeButton.innerHTML = response[i].size;
+
           //identif buton add to cart
 
           var addToCart=productPriceDiv.getElementsByTagName("a")[0];
           addToCart.classList.add("buy");addToCart.setAttribute("data-name", response[i].name);
           addToCart.setAttribute("data-price", response[i].price); addToCart.setAttribute("data-id", response[i].id);
 
+          
         }
       }
 
@@ -203,7 +208,6 @@ var shoppingCart = (function() {
 	var name = $(this).data('name');
     var price = Number($(this).data('price'));
     var id = $(this).data('id');
-    console.log(id);
     shoppingCart.addItemToCart(name, price, id, 1);
     
     displayCart(name);
@@ -221,7 +225,6 @@ var shoppingCart = (function() {
     var cartArray = shoppingCart.listCart();
 	var output = "";
 	for(var i in cartArray) {
-        console.log(cartArray);
 	  output += "<tr>"
 		+ "<td>" + cartArray[i].name + "</td>" 
 		+ "<td>(" + "$" + cartArray[i].price + ")</td>"
