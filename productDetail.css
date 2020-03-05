@@ -116,7 +116,7 @@ nav {
 
 
   /*-----Search bar
-  ----------------------------------------------------*/
+  
   .searchContainer{
     height: 10%;;
     text-align: center;
@@ -133,7 +133,7 @@ nav {
     text-align: center;
     cursor: pointer;
     border: 1px solid grey;
-    /* border-left: none;   */
+    /* border-left: none;   
     color: white;
     font-size: 17px;
     padding: 10px;
@@ -153,8 +153,10 @@ nav {
     width: 60%;
     background: #f1f1f1;
    
+  } */
+  hr{
+    margin: 0px;
   }
-  
 
   /* -----Breadcrumb path---- */
   .breadcrumb {
