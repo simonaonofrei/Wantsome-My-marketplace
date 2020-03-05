@@ -334,13 +334,13 @@ var shoppingCart = (function() {
         console.log(cartArray);
 	  output += "<tr>"
 		+ "<td>" + cartArray[i].name + "</td>" 
-		+ "<td>(" + cartArray[i].price + ")</td>"
+		+ "<td>(" + "$" + cartArray[i].price + ")</td>"
 		+ "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-id=" + cartArray[i].id + ">-</button>"
 		+ "<input type='number' class='item-count form-control' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>"
 		+ "<button class='plus-item btn btn-primary input-group-addon' data-id=" + cartArray[i].id + ">+</button></div></td>"
 		+ "<td><button class='delete-item btn btn-danger' data-id=" + cartArray[i].id + ">X</button></td>"
 		+ " = " 
-		+ "<td>" + cartArray[i].total + "</td>" 
+		+ "<td>" + "$" + cartArray[i].total + "</td>" 
 		+  "</tr>";
 	}
 	$('.show-cart').html(output);
@@ -351,7 +351,7 @@ var shoppingCart = (function() {
   // Delete item button
     $('.show-cart').on("click", ".delete-item", function(event) {
 	var id = $(this).data('id')
-	shoppingCart.removeItemFromCart(id);
+	shoppingCart.removeItemFromCartAll(id);
 	displayCart();
   })
   
