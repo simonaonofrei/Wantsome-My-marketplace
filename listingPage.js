@@ -58,7 +58,7 @@ fetch(`http://localhost:3000/api/dresses${window.location.search}`, {
 
                     var priceEl = document.createElement("h5");
                     priceEl.classList.add("text-center");
-                    priceEl.innerText = "$ " + response[i].price;
+                    priceEl.innerText = "$" + response[i].price;
 
                     var butonEl = document.createElement("a");
                     butonEl.setAttribute("href", "#");
@@ -130,7 +130,7 @@ fetch(`http://localhost:3000/api/dresses${window.location.search}`, {
 
                 var priceEl = document.createElement("h5");
                 priceEl.classList.add("text-center");
-                priceEl.innerText = "$ " + response[i].price;
+                priceEl.innerText = "$" + response[i].price;
 
                 var butonEl = document.createElement("a");
                 butonEl.setAttribute("href", "#");
