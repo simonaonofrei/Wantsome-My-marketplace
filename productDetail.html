@@ -101,7 +101,7 @@
                             <li><a href="listingPage.html?section=scarves">Scarves</a></li>
                         </ul>
                     </li>
-                    <li class="col-md-2 text-center"><a href="#">New collection</a></li>
+                    <li class="col-md-2 text-center"><a href="listingPage.html">New collection</a></li>
                     <li class="col-md-2 text-center"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -137,8 +137,9 @@
             <div class="col-sm-6 left">
                 <div class="imagSlider">
                     <ul class="thumb">
-                        <li><a href="ImageGallery1.1.PNG" target="imgBox"><img src="ImageGallery1.1.PNG"></a></li>
-                        <li><a href="ImageGallery.PNG" target="imgBox"><img src="ImageGallery.PNG"></a></li>
+                        <li><a href="ImageGallery1.1.PNG" target="imgBox" class="pic"><img src="ImageGallery1.1.PNG"></a></li>
+                        <li><a href="ImageGallery1.2.PNG" target="imgBox" class="pic"><img src="ImageGallery1.2.PNG"></a></li>
+                        <li><a href="ImageGallery.PNG" target="imgBox" class="pic"><img src="ImageGallery.PNG"></a></li>
                     </ul>
                     <div class="imgBox"><img src="ImageGallery.PNG">
                     </div>
@@ -324,14 +325,7 @@
     <!--End footer-->
     <script src="productDetail.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.thumb a').mouseover(function (e) {
-                e.preventDefault();
-                $('.imgBox img').attr("src", $(this).attr("href"))
-            })
-        })
-    </script>
+   
 </body>
 
 </html>

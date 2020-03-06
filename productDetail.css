@@ -159,7 +159,7 @@ nav {
   }
 
   /* -----Breadcrumb path---- */
-  .breadcrumb {
+  /* .breadcrumb {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -170,7 +170,7 @@ nav {
     list-style: none;
     background-color:   white;
     border-radius: .25rem;
-}
+} */
 
 /* images slider - images */
 
